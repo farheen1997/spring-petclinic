@@ -3,6 +3,7 @@ node {
     stage('Preparation') { // for display purposes
 
         sh "rm -rf *"
+        sh "pwd"
         // Get some code from a GitHub repository
        git branch: 'feature/frist-branch', credentialsId: 'f0e3f95e-2151-4024-a7eb-bc7aee3bb834', url: 'https://github.com/farheen1997/palatu-clinic.git'
         // Get the Maven tool.
@@ -17,5 +18,6 @@ node {
     stage('Results') {
         
         sh "ls -lrt /var/lib/jenkins/workspace/pipeline-spring-petclinic/target"
+        sh "pwd"
     }
 }
