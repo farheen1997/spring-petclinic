@@ -16,6 +16,6 @@ node {
     }
     stage('Results') {
         
-        sh "ls -lrt /var/lib/jenkins/workspace/pipeline-palatu-clinic/target"
+        sh "ls -lrt /var/lib/jenkins/workspace/pipeline-spring-petclinic/target"
     }
 }
