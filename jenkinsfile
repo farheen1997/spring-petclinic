@@ -5,7 +5,8 @@ node {
         sh "rm -rf *"
         sh "pwd"
         // Get some code from a GitHub repository
-       git branch: 'feature/frist-branch', credentialsId: 'f0e3f95e-2151-4024-a7eb-bc7aee3bb834', url: 'https://github.com/farheen1997/palatu-clinic.git'
+         git credentialsId: '2e593954-6bc0-4335-b90d-53455513af96', url: 'https://github.com/AzalKhan/spring-petclinic.git'
+
         // Get the Maven tool.
         // ** NOTE: This 'M3' Maven tool must be configured
         // **       in the global configuration.
