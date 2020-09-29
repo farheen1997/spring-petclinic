@@ -1,0 +1,21 @@
+node {
+   
+    stage('Preparation') { // for display purposes
+
+        sh "rm -rf *"
+        // Get some code from a GitHub repository
+       git branch: 'feature/frist-branch', credentialsId: 'f0e3f95e-2151-4024-a7eb-bc7aee3bb834', url: 'https://github.com/farheen1997/palatu-clinic.git'
+        // Get the Maven tool.
+        // ** NOTE: This 'M3' Maven tool must be configured
+        // **       in the global configuration.
+    
+    }
+    stage('Build') {
+      
+        sh "mvn clean package -Dmaven.test.skip=true"
+    }
+    stage('Results') {
+        
+        sh "ls -lrt /var/lib/jenkins/workspace/pipeline-palatu-clinic/target"
+    }
+}
